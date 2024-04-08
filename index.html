@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ARBAAAAA</title>
+    <!--RUBIK - GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFB3C1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 52px;
+            height: 80px;
+            border-radius: 50px 50px 0 0;
+            background: #A4133C;
+        }
+
+        .heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .text {
+            font-family: 'Rubik', sans-serif;
+            font-size: 25pt;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="text">ARBAAAAA</div>
+    <script>
+        const heart = document.querySelector('.heart');
+        setInterval(() => {
+            heart.style.animation = 'pulse 2s ease-in-out infinite';
+        }, 1000);
+    </script>
+</body>
+</html>
