@@ -27,5 +27,5 @@ document.getElementById("p_b2-scrivere").onclick = function () {
 }
 
 document.getElementById("p_b2-audio").onclick = function () {
-    location.href = "https://pxs-yt.github.io/detajettt/PLIDA_B2/B2-nuovo_formato-Audio-esempio.mp3"
+    location.href = "https://drive.google.com/file/d/1s9t1RVKnvcBu9EIJNEorkmlP4KOwrwEk/view?usp=drive_link"
 }
