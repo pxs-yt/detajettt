@@ -23,9 +23,9 @@ document.getElementById("p_b2-parlare").onclick = function () {
 }
 
 document.getElementById("p_b2-scrivere").onclick = function () {
-    location.href = "https://pxs-yt.github.io/detajettt/PLIDA-B2-prova_esempio-scrivere.pdf"
+    location.href = "https://pxs-yt.github.io/detajettt/PLIDA_B2/PLIDA-B2-prova_esempio-scrivere.pdf"
 }
 
 document.getElementById("p_b2-audio").onclick = function () {
-    location.href = "https://pxs-yt.github.io/detajettt/B2-nuovo_formato-Audio-esempio.mp3"
+    location.href = "https://pxs-yt.github.io/detajettt/PLIDA_B2/B2-nuovo_formato-Audio-esempio.mp3"
 }
