@@ -72,6 +72,7 @@
             margin-top: 20px;
         }
     </style>
+    <script src="https://pxs-yt.github.io/detajettt/playerjs.js"></script>
 </head>
 <body>
     <div class="heart"></div>
@@ -82,7 +83,12 @@
             heart.style.animation = 'pulse 2s ease-in-out infinite';
         }, 1000);
     </script>
-    
+    <br><br>
+    <div id="player"></div>
+
+    <script>
+    var player = new Playerjs({id:"player", file:"//pxs-yt.github.io/detajettt/songs/Caught_in_Your_Rhythm-UNFINISHED.mp3"});
+    </script>
 
     <script src="script.js"></script>
 </body>
