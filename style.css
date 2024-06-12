@@ -24,3 +24,10 @@
   .main-button:hover {
     transform: translateY(-2px);
   }
+
+
+
+  /* Heart emoji cursor */
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewport="0 0 32 32"><text y="50%" transform="translate(0, 12)">❤️</text></svg>'), auto;
+}
