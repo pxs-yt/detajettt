@@ -10,25 +10,132 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #FFB3C1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 52px;
+            height: 80px;
+            border-radius: 50px 50px 0 0;
+            background: #A4133C;
+        }
+
+        .heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .text {
+            font-family: 'Rubik', sans-serif;
+            font-size: 25pt;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .note {
+            display: none;
+            position: fixed; /* Fixed positioning to stay centered even on scroll */
+            top: 50%;  /* Move to the vertical center */
+            left: 50%; /* Move to the horizontal center */
+            transform: translate(-50%, -50%); /* Offset the element's position by 50% of its width and height to center */
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #f8a5c2;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-size: 18px;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+    </style>
+    <script src="https://pxs-yt.github.io/detajettt/playerjs.js"></script>
 </head>
 <body>
     <div class="heart"></div>
     <div class="text">ARBAAAAA</div>
 
-    <!-- New note popup div -->
-    <div class="note" id="note">My fav criminal🌟</div>
+     <!-- New note popup div -->
+     <div class="note" id="note">My fav criminal🌟
+        <button class="close-btn" id="closeBtn">&times;</button>
+     </div>
 
     <script>
         const heart = document.querySelector('.heart');
         const note = document.getElementById('note');
+        const closeBtn = document.getElementById('closeBtn');
 
         heart.addEventListener('click', () => {
             note.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            note.style.display = 'none';
         });
 
         setInterval(() => {
             heart.style.animation = 'pulse 2s ease-in-out infinite';
         }, 1000);
     </script>
+    <br><br>
+
+    <script src="script.js"></script>
 </body>
 </html>
